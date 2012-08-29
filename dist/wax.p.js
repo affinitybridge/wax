@@ -1,4 +1,4 @@
-/* wax - 7.0.0dev - v6.0.4-37-gbaf9ab1 */
+/* wax - 7.0.0dev - v6.0.4-39-g4b08a4c */
 
 
 !function (name, context, definition) {
@@ -2743,7 +2743,7 @@ wax.movetip = function() {
         var content;
         if (popped) return;
         if ((o.e.type === 'mousemove' || !o.e.type)) {
-            content = o.formatter({ format: 'teaser' }, o.data);
+            content = o.content || o.formatter({ format: 'teaser' }, o.data);
             if (!content) return;
             hide();
             parent.style.cursor = 'pointer';
