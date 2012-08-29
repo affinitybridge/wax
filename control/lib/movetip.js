@@ -51,7 +51,7 @@ wax.movetip = function() {
         var content;
         if (popped) return;
         if ((o.e.type === 'mousemove' || !o.e.type)) {
-            content = o.formatter({ format: 'teaser' }, o.data);
+            content = o.content || o.formatter({ format: 'teaser' }, o.data);
             if (!content) return;
             hide();
             parent.style.cursor = 'pointer';
